@@ -168,7 +168,7 @@ function esPrimo(numero) {
   if(numero===0 ||numero===1 ){
     resultado=false;
   }else {
-    for (let index = 1; index = numero; index++) {
+    for (let index = 1; index < numero+1; index++) {
       if(numero%index===0){contador++}
       
     }
@@ -185,6 +185,11 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
+  let resultado;
+  if(valor===true){
+    resultado="Soy verdadero";
+  }else{resultado="Soy falso";}
+  return resultado;
 
 }
 
@@ -192,19 +197,36 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  let resultado=[];
+  for(let i = 0;i < 11; i++){
+    resultado.push(i*6);
+  }
+return resultado;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  let resultado;
+  if(numero>=100 && numero<=999 ){
+    resultado=true;
+  }else{
+    resultado=false;
+  }
+  return resultado;
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let bandera=0;
+  let resultado=numero;
+  while(bandera<8){
+    resultado+=5;
+    bandera++;
+  }
+  return resultado;
 }
 
 
